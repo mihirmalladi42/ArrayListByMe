@@ -9,15 +9,7 @@ class ArrayList {
     short[] arrShort;
     byte[] arrByte;
     String[] arrString;
-    boolean intBool;
-    boolean doubleBool;
-    boolean floatBool;
-    boolean booleanBool;
-    boolean charBool;
-    boolean longBool;
-    boolean shortBool;
-    boolean byteBool;
-    boolean stringBool;
+    boolean intBool, doubleBool, floatBool, booleanBool, charBool, longBool, shortBool, byteBool, stringBool;
     public ArrayList(String dataType) {
         if (dataType.equalsIgnoreCase("int")) {
             arrInt = new int[0];
@@ -357,7 +349,7 @@ class ArrayList {
     public void set(int index, String string) {
         arrString[index] = string;
     }
-    public int void size() {
+    public int size() {
         if (intBool) {
             return arrInt.length;
         } else if (doubleBool) {
@@ -377,15 +369,158 @@ class ArrayList {
         } else if (stringBool) {
             return arrString.length;
         }
+        return 0;
     }
-    public int size(int empty) {
-        
+    public boolean isEmpty() {
+        if (intBool) {
+            if (arrInt.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (doubleBool) {
+            if (arrDouble.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (floatBool) {
+            if (arrFloat.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (booleanBool) {
+            if (arrBoolean.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (charBool) {
+            if (arrChar.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (longBool) {
+            if (arrLong.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (shortBool) {
+            if (arrShort.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (byteBool) {
+            if (arrByte.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else if (stringBool) {
+            if (arrString.length < 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
     }
-    public int size(int empty) {
-        
+    public void clear() {
+        if (intBool) {
+            arrInt = new int[0];
+        } else if (doubleBool) {
+            arrDouble = new double[0];
+        } else if (floatBool) {
+            arrFloat = new float[0];
+        } else if (booleanBool) {
+            arrBoolean = new boolean[0];
+        } else if (charBool) {
+            arrChar = new char[0];
+        } else if (longBool) {
+            arrLong = new long[0];
+        } else if (shortBool) {
+            arrShort = new short[0];
+        } else if (byteBool) {
+            arrByte = new byte[0];
+        } else if (stringBool) {
+            arrString = new String[0];
+        }
     }
-    public int size(int empty) {
-        
+    public boolean contains(int e) {
+        for (int i = 0; i < arrInt.length; i++) {
+            if (arrInt[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(double e) {
+        for (int i = 0; i < arrDouble.length; i++) {
+            if (arrDouble[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(float e) {
+        for (int i = 0; i < arrFloat.length; i++) {
+            if (arrFloat[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(boolean e) {
+        for (int i = 0; i < arrBoolean.length; i++) {
+            if (arrBoolean[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(char e) {
+        for (int i = 0; i < arrChar.length; i++) {
+            if (arrChar[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(long e) {
+        for (int i = 0; i < arrLong.length; i++) {
+            if (arrLong[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(short e) {
+        for (int i = 0; i < arrShort.length; i++) {
+            if (arrShort[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(byte e) {
+        for (int i = 0; i < arrByte.length; i++) {
+            if (arrByte[i] == e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean contains(String e) {
+        for (int i = 0; i < arrString.length; i++) {
+            if (arrString[i].equals(e)) {
+                return true;
+            }
+        }
+        return false;
     }
     public void print() {
         if (intBool) {
